@@ -23,7 +23,9 @@ const Home = () => {
     setBlogs(newBlogs);
   };
 
-  useEffect(() => {});
+  useEffect(() => {
+    console.log("use effect ran");
+  });
   // function that runs when the component is first rendered and whenever the blogs state changes
 
   return (
