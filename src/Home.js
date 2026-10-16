@@ -23,12 +23,25 @@ const Home = () => {
     setBlogs(newBlogs);
   };
 
-  useEffect(() => {});
   // function that runs when the component is first rendered and whenever the blogs state changes
+  // run only when the component is first rendered
+  // useEffect(() => {
+  //   console.log("useEffect ran");
+  //   console.log(blogs);
+  // }, []);
+
+  const [name, setName] = useState("mario");
+  useEffect(() => {
+    console.log("useEffect run");
+    console.log(name);
+  }, [name]);
+  //only run when the name state changes
 
   return (
     <div className="home">
       <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
+      <button onClick={() => setName("luigi")}>Change Name</button>
+      <p>{name}</p>
     </div>
   );
 };
