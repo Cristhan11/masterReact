@@ -6,7 +6,6 @@ const Home = () => {
 
   const handleClick = () => {
     setName("Luigi");
-    setAge(30);
   };
 
   return (
